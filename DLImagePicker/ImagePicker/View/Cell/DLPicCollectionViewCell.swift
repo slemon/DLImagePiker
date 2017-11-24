@@ -16,6 +16,7 @@ class DLPicCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.yellow
+        
         initView()
     }
     

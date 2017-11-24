@@ -25,6 +25,22 @@ class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UIColle
         loadData()
         
         initView()
+        
+        initDismissButton()
+    }
+    
+    func initDismissButton() {
+        
+        let dismissButton = UIButton.init(type: UIButtonType.system)
+        dismissButton.frame = CGRect.init(x: 0, y: 0, width: 44, height: 44)
+        dismissButton.addTarget(self, action: #selector(controllerDimiss), for: .touchUpInside)
+        dismissButton.setTitle("取消", for: .normal)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: dismissButton)
+    }
+    
+    @objc func controllerDimiss() {
+        dismiss(animated: true, completion: nil)
     }
     
     func initView () {

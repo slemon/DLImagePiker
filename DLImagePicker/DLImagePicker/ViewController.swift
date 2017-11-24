@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        popAlbum()
+    }
 
     @objc func popAlbum() {
         
