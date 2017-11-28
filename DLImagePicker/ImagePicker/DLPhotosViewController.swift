@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-var picCollectionView : UICollectionView?
+var picCollectionView : UICollectionView!
 var dataArr = NSMutableArray()
 
 let screenWidth  = UIScreen.main.bounds.width;
@@ -52,10 +52,10 @@ class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UIColle
         layout.itemSize = CGSize(width: ItemWidth, height: ItemWidth)
         
         picCollectionView = UICollectionView(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: screenHeight), collectionViewLayout: layout)
-        picCollectionView!.register(DLPicCollectionViewCell.self, forCellWithReuseIdentifier:"cell")
-        picCollectionView?.delegate = self;
-        picCollectionView?.dataSource = self;
-        picCollectionView?.backgroundColor = UIColor.white
+        picCollectionView.register(DLPicCollectionViewCell.self, forCellWithReuseIdentifier:"cell")
+        picCollectionView.delegate = self;
+        picCollectionView.dataSource = self;
+        picCollectionView.backgroundColor = UIColor.white
         view.addSubview(picCollectionView!)
     }
     
@@ -80,12 +80,14 @@ class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UIColle
         collectionViewCell.titleLabel?.text = (dataArr[indexPath.item] as! String)
         return collectionViewCell;
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+
 
     /*
     // MARK: - Navigation

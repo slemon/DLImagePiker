@@ -10,7 +10,7 @@ import UIKit
 
 class DLPicCollectionViewCell: UICollectionViewCell {
     
-    var titleLabel : UILabel?
+    var titleLabel : UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +26,7 @@ class DLPicCollectionViewCell: UICollectionViewCell {
     
     func initView() {
         titleLabel = UILabel(frame: CGRect.init(x: 0, y: 0, width: 100, height: 20))
-        addSubview(titleLabel!)
+        addSubview(titleLabel)
     }
     
     

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var permissionController : DLPermissionController = DLPermissionController()
+
 class ViewController: UIViewController {
     
     var button : UIButton!
@@ -31,7 +33,13 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        popAlbum()
+        
+        if (DLPhotoPermission.Photos.status != .authorized) {
+            present(permissionController, animated: true, completion: nil)
+        }else {
+            popAlbum()
+        }
+        
     }
 
     @objc func popAlbum() {

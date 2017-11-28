@@ -17,6 +17,8 @@
 		F4CC06D81FC6CFF400B3AF87 /* DLAlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC06D71FC6CFF400B3AF87 /* DLAlbumListViewController.swift */; };
 		F4CC06DA1FC6D02800B3AF87 /* DLPhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC06D91FC6D02800B3AF87 /* DLPhotoPreviewViewController.swift */; };
 		F4CC06DE1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC06DD1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift */; };
+		F4CC07101FCD597C00B3AF87 /* DLPhotoPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC070F1FCD597C00B3AF87 /* DLPhotoPermission.swift */; };
+		F4CC07121FCD69E500B3AF87 /* DLPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F4CC06D71FC6CFF400B3AF87 /* DLAlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLAlbumListViewController.swift; sourceTree = "<group>"; };
 		F4CC06D91FC6D02800B3AF87 /* DLPhotoPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhotoPreviewViewController.swift; sourceTree = "<group>"; };
 		F4CC06DD1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPicCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4CC070F1FCD597C00B3AF87 /* DLPhotoPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhotoPermission.swift; sourceTree = "<group>"; };
+		F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPermissionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		F4CC06DB1FC7F3CC00B3AF87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC070E1FCD591300B3AF87 /* Permission */,
 				F4CC06DC1FC7F3D700B3AF87 /* Cell */,
 			);
 			path = View;
@@ -101,6 +106,15 @@
 				F4CC06DD1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F4CC070E1FCD591300B3AF87 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC070F1FCD597C00B3AF87 /* DLPhotoPermission.swift */,
+				F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */,
+			);
+			path = Permission;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CC07121FCD69E500B3AF87 /* DLPermissionController.swift in Sources */,
 				F4CC06C21FC6BA4300B3AF87 /* ViewController.swift in Sources */,
 				F4CC06DE1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift in Sources */,
 				F4CC06C81FC6BA4300B3AF87 /* DLImagePicker.xcdatamodeld in Sources */,
 				F4CC06C01FC6BA4300B3AF87 /* AppDelegate.swift in Sources */,
 				F4CC06D81FC6CFF400B3AF87 /* DLAlbumListViewController.swift in Sources */,
+				F4CC07101FCD597C00B3AF87 /* DLPhotoPermission.swift in Sources */,
 				F4CC06DA1FC6D02800B3AF87 /* DLPhotoPreviewViewController.swift in Sources */,
 				F4CC06D61FC6CFDB00B3AF87 /* DLPhotosViewController.swift in Sources */,
 			);
