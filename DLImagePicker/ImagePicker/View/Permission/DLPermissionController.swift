@@ -54,6 +54,14 @@ class DLPermissionController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @objc func gotoMakeSetting () {
+        DispatchQueue.main.async {
+            if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.shared.openURL(settingsURL)
+            }
+        }
+    }
+    
     func makeCloseButton() -> UIButton {
         let closeButton = UIButton(type: .custom)
         closeButton.setTitle("关闭", for: .normal)
@@ -70,6 +78,7 @@ class DLPermissionController: UIViewController {
         settingButton.backgroundColor = UIColor.blue
         settingButton.layer.cornerRadius = 5
         settingButton.titleLabel?.textColor = UIColor.black
+        settingButton.addTarget(self, action: #selector(gotoMakeSetting), for: .touchUpInside)
         return settingButton
     }
     

@@ -19,6 +19,10 @@
 		F4CC06DE1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC06DD1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift */; };
 		F4CC07101FCD597C00B3AF87 /* DLPhotoPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC070F1FCD597C00B3AF87 /* DLPhotoPermission.swift */; };
 		F4CC07121FCD69E500B3AF87 /* DLPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */; };
+		F4CC071A1FCEB81C00B3AF87 /* Gallery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F4CC07191FCEB81C00B3AF87 /* Gallery.bundle */; };
+		F4CC071D1FCEE08900B3AF87 /* UIView-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC071C1FCEE08900B3AF87 /* UIView-Extention.swift */; };
+		F4CC07201FCFDFE700B3AF87 /* ImagesLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC071F1FCFDFE700B3AF87 /* ImagesLibrary.swift */; };
+		F4CC07221FCFFD3F00B3AF87 /* ExecuteOnce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CC07211FCFFD3F00B3AF87 /* ExecuteOnce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		F4CC06DD1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPicCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4CC070F1FCD597C00B3AF87 /* DLPhotoPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPhotoPermission.swift; sourceTree = "<group>"; };
 		F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLPermissionController.swift; sourceTree = "<group>"; };
+		F4CC07191FCEB81C00B3AF87 /* Gallery.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Gallery.bundle; sourceTree = "<group>"; };
+		F4CC071C1FCEE08900B3AF87 /* UIView-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-Extention.swift"; sourceTree = "<group>"; };
+		F4CC071F1FCFDFE700B3AF87 /* ImagesLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesLibrary.swift; sourceTree = "<group>"; };
+		F4CC07211FCFFD3F00B3AF87 /* ExecuteOnce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecuteOnce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,9 @@
 		F4CC06D41FC6BACE00B3AF87 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				F4CC071E1FCFDFCF00B3AF87 /* Images */,
+				F4CC071B1FCEE01700B3AF87 /* Utils */,
+				F4CC07181FCEB81C00B3AF87 /* Resourse */,
 				F4CC06DB1FC7F3CC00B3AF87 /* View */,
 				F4CC06D51FC6CFDB00B3AF87 /* DLPhotosViewController.swift */,
 				F4CC06D71FC6CFF400B3AF87 /* DLAlbumListViewController.swift */,
@@ -115,6 +126,31 @@
 				F4CC07111FCD69E500B3AF87 /* DLPermissionController.swift */,
 			);
 			path = Permission;
+			sourceTree = "<group>";
+		};
+		F4CC07181FCEB81C00B3AF87 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC07191FCEB81C00B3AF87 /* Gallery.bundle */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		F4CC071B1FCEE01700B3AF87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC071C1FCEE08900B3AF87 /* UIView-Extention.swift */,
+				F4CC07211FCFFD3F00B3AF87 /* ExecuteOnce.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F4CC071E1FCFDFCF00B3AF87 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F4CC071F1FCFDFE700B3AF87 /* ImagesLibrary.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +214,7 @@
 			files = (
 				F4CC06CD1FC6BA4300B3AF87 /* LaunchScreen.storyboard in Resources */,
 				F4CC06CA1FC6BA4300B3AF87 /* Assets.xcassets in Resources */,
+				F4CC071A1FCEB81C00B3AF87 /* Gallery.bundle in Resources */,
 				F4CC06C51FC6BA4300B3AF87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,11 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4CC07121FCD69E500B3AF87 /* DLPermissionController.swift in Sources */,
+				F4CC071D1FCEE08900B3AF87 /* UIView-Extention.swift in Sources */,
 				F4CC06C21FC6BA4300B3AF87 /* ViewController.swift in Sources */,
+				F4CC07201FCFDFE700B3AF87 /* ImagesLibrary.swift in Sources */,
 				F4CC06DE1FC7F3FA00B3AF87 /* DLPicCollectionViewCell.swift in Sources */,
 				F4CC06C81FC6BA4300B3AF87 /* DLImagePicker.xcdatamodeld in Sources */,
 				F4CC06C01FC6BA4300B3AF87 /* AppDelegate.swift in Sources */,
 				F4CC06D81FC6CFF400B3AF87 /* DLAlbumListViewController.swift in Sources */,
+				F4CC07221FCFFD3F00B3AF87 /* ExecuteOnce.swift in Sources */,
 				F4CC07101FCD597C00B3AF87 /* DLPhotoPermission.swift in Sources */,
 				F4CC06DA1FC6D02800B3AF87 /* DLPhotoPreviewViewController.swift in Sources */,
 				F4CC06D61FC6CFDB00B3AF87 /* DLPhotosViewController.swift in Sources */,
@@ -335,13 +375,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = VB8MM4B7J3;
+				DEVELOPMENT_TEAM = S38HQFK7S4;
 				INFOPLIST_FILE = DLImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangxin.DLImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d1220632-b7eb-44d1-92fc-ec06dd093cf7";
-				PROVISIONING_PROFILE_SPECIFIER = fangxinDebugAll;
+				PROVISIONING_PROFILE = "802b9570-be95-4068-98f2-1e749e58872d";
+				PROVISIONING_PROFILE_SPECIFIER = GLAllAPP;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +395,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DLImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangxin.DLImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
