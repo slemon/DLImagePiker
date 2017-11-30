@@ -16,16 +16,12 @@ class ImagesLibrary: NSObject {
 
     public func getImageImageAssets() -> [PHAsset] {
         
-//        let collection = PHAssetCollection()
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true )]
-        
         let fetchResult =  PHAsset.fetchAssets(with: fetchOptions)
-        
         fetchResult.enumerateObjects { (assets, _, _) in
             self.items.append(assets)
         }
-        
         return items
     }
     

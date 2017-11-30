@@ -10,12 +10,12 @@ import UIKit
 import Photos
 
 var picCollectionView : UICollectionView!
-var dataArr = NSMutableArray()
+var dataArr : [PHAsset] = []
 
 let screenWidth  = UIScreen.main.bounds.width;
 let screenHeight = UIScreen.main.bounds.height;
 
-class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+class DLPhotosViewController: UIViewController,UICollectionViewDelegateFlowLayout{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,23 +62,11 @@ class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UIColle
     func loadData() {
         
         for _ in 0...10 {
-            dataArr.add("Tomcat")
-            dataArr.add("Jetty")
-            dataArr.add("Apache")
-            dataArr.add("Jboss")
+            
+            let items = ImagesLibrary.init().getImageImageAssets()
+            dataArr += items
+            
         }
-    }
-    
-    //MARK: - CollectionDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArr.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DLPicCollectionViewCell
-        collectionViewCell.titleLabel?.text = (dataArr[indexPath.item] as! String)
-        return collectionViewCell;
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,17 +74,22 @@ class DLPhotosViewController: UIViewController, UICollectionViewDelegate,UIColle
         // Dispose of any resources that can be recreated.
     }
     
+}
+
+extension DLPhotosViewController : UICollectionViewDelegate,UICollectionViewDataSource {
+    //MARK: - CollectionDelegate
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataArr.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! DLPicCollectionViewCell
+        let assets = dataArr[indexPath.item] as PHAsset
+        collectionViewCell.confiureItem(assets)
+        
+        return collectionViewCell;
+    }
+    
 }
